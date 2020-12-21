@@ -1,0 +1,10 @@
+<div class='login'>
+    <h2 class='log'>LOGIN</h2>
+    <form>
+    <input type="email" placeholder="Enter Email" required email #mail/>
+    <br/>
+    <input type="password" required #pass/>
+    <br/>
+    <button mat-raised-button color="primary" (click)='onLogin(mail.value, pass.value) '>Login</button>
+    </form>
+</div>

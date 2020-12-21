@@ -1,0 +1,18 @@
+.login{
+    width:300px;
+    height:200px;
+    background-color: ivory;
+    margin: auto;
+}
+.log{
+    color: blue;
+    padding-top: 5px;
+}
+input{
+    border:none;
+    border-bottom: 2px solid black;
+    padding: 5px;
+}
+button{
+    margin-top:15px;
+}

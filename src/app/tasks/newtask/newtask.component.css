@@ -1,0 +1,16 @@
+.new{
+    width:250px;
+    height:100px;
+    background-color: whitesmoke;
+    margin:auto;
+    padding-top: 40px;
+}
+input{
+    margin:10px;
+    border:none;
+    border-bottom: 2px solid black;
+}
+h1{
+    margin:0px;
+    color:teal;
+}

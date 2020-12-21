@@ -1,0 +1,50 @@
+<div class='main'>
+<div class='todo'>
+<h3 class='title'>TODO</h3>
+<div class='dnd'
+       cdkDropList
+       #listOne="cdkDropList"
+       [cdkDropListData]="todos"
+       [cdkDropListConnectedTo]="listTwo"
+       (cdkDropListDropped)="onDrop($event)">
+<div class='task' *ngFor="let todo of todos, let i=index" cdkDrag >
+     {{todo.label}}
+     <br/>
+     {{todo.date}}
+     <br/>
+     <mat-icon (click)='deleteTodo(i)'>delete</mat-icon>
+</div>
+</div>
+</div> 
+<div class='review'> 
+<h3 class='title'>REVIEW</h3>
+<div class='dnd'
+       cdkDropList
+       #listTwo="cdkDropList"
+       [cdkDropListData]="review"
+       [cdkDropListConnectedTo]="listThree"
+       (cdkDropListDropped)="onDrop($event)">
+<div class='task' *ngFor="let todo of review, let i=index" cdkDrag>
+     {{todo.label}}
+     <br/>
+     {{todo.date}}
+</div>
+</div>
+</div>
+<div class='done'> 
+<h4 class='title'>DONE</h4> 
+<div class='dnd'
+       cdkDropList
+       #listThree="cdkDropList"
+       [cdkDropListData]="done"
+       (cdkDropListDropped)="onDrop($event)">
+<div class="task" *ngFor="let todo of done, let i=index" cdkDrag>
+     {{todo.label}}
+     <br/>
+     {{todo.date}}
+</div>
+</div>
+</div>
+</div>
+<button mat-fab class='b1' (click)='addTask()'><mat-icon>add</mat-icon></button>
+<button mat-raised-button class='b2' (click)="logout()">Logout </button>

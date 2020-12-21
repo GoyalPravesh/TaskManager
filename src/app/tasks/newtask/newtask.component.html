@@ -1,0 +1,6 @@
+<h1>Add a new task</h1>
+<div class='new'>
+    <input type='text' #newToDo/>
+    <br/>
+    <button mat-raised-button color="primary"  (click)="addToDo(newToDo.value)">Create</button>
+</div>
